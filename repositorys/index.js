@@ -1,10 +1,8 @@
 const { MongoClient, ObjectID } = require('mongodb');
 const { logger } = require('../configs/log');
+const { MONGODB_URI } = require('../configs/Constants');
 
-const uri =
-    "mongodb+srv://assignment-api:p@ssw0rd@cluster0.nxqjg.mongodb.net/assignment?retryWrites=true&w=majority";
-
-const client = new MongoClient(uri, { useUnifiedTopology: true,
+const client = new MongoClient(MONGODB_URI, { useUnifiedTopology: true,
     useNewUrlParser: true, });
 
 async function run() {
